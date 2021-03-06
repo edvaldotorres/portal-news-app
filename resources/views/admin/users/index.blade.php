@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Dashboard</div>
+                    <div class="card-header">Gestão de Usuários</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -14,7 +14,7 @@
                             </div>
                         @endif
 
-                        <a class="text-success" href="{{ route('user.create') }}">&plus; Cadastrar Usuário</a>
+                        <a class="text-success" href="{{ route('user.create') }}"><i class="fas fa-plus"></i> Cadastrar Usuário</a>
 
                         @if ($errors)
                             @foreach ($errors->all() as $error)
@@ -53,6 +53,9 @@
 
                             </tbody>
                         </table>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        {!! $users->links() !!}
                     </div>
                 </div>
             </div>

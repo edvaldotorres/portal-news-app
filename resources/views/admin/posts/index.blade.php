@@ -10,7 +10,7 @@
                     <div class="card-body">
 
                         {{-- @can('Cadastrar Artigo') --}}
-                            <a class="text-success" href="{{ route('post.create') }}">&plus; Cadastrar Artigo</a>
+                            <a class="text-success" href="{{ route('post.create') }}"><i class="fas fa-plus"></i> Cadastrar Notícia</a>
                         {{-- @endcan --}}
 
                         @if ($errors)

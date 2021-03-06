@@ -25,7 +25,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::paginate(5);
 
         return view('admin.posts.index', [
             'posts' => $posts
@@ -107,6 +107,7 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $post->title = $request->title;
+        $post->lead = $request->lead;
         $post->content = $request->content;
 
         if (isset($request->published)) {

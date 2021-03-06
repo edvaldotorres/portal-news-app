@@ -16,14 +16,13 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {                                                               
             $table->increments('id');
             
-            // $table->unsignedInteger('id_user')->nullable();
-            // $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedInteger('id_user')->nullable();
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
 
             $table->string('title');
             $table->string('lead', 191);
             $table->text('content');
             $table->boolean('published');
-            // $table->string('image')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

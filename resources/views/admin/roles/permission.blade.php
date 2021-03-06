@@ -5,11 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Dashboard</div>
+                    <div class="card-header">Permissões</div>
 
                     <div class="card-body">
 
-                        <a class="text-success" href="{{ route('role.index') }}">&leftarrow; Voltar para a listagem</a>
+                        <a class="text-success" href="{{ route('role.index') }}"><i class="fas fa-long-arrow-alt-left"></i> Voltar para a listagem</a>
 
                         @if($errors)
                             @foreach($errors->all() as $error)
@@ -32,7 +32,7 @@
                                 </div>
                            @endforeach
 
-                            <button type="submit" class="btn btn-block btn-success mt-4">Sincronizar Perfil</button>
+                            <button type="submit" class="btn btn-block btn-success mt-4">Sincronizar perfil</button>
                         </form>
                     </div>
 

@@ -19,6 +19,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- font-awesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"></script>
 </head>
 
 <body>
@@ -63,15 +67,20 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('user.index') }}">Gestão de Usuários</a>
-                                    <a class="dropdown-item" href="{{ route('role.index') }}">Gestão de Perfis</a>
-                                    <a class="dropdown-item" href="{{ route('permission.index') }}">Gestão de
+                                    <a class="dropdown-item" href="{{ route('user.index') }}"><i
+                                            class="fas fa-users"></i> | Gestão de Usuários</a>
+                                    <a class="dropdown-item" href="{{ route('role.index') }}"><i
+                                            class="fas fa-id-card"></i> | Gestão de Perfis</a>
+                                    <a class="dropdown-item" href="{{ route('permission.index') }}"><i
+                                            class="fas fa-user-lock"></i> | Gestão de
                                         Permissão</a>
-                                    <a class="dropdown-item" href="{{ route('post.index') }}">Gestão de Posts</a>
-                                    <a class="dropdown-item" href="{{ route('news.index') }}">Portal de Notícias</a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                 document.getElementById('logout-form').submit();">
-                                        {{ __('Sair') }}
+                                    <a class="dropdown-item" href="{{ route('post.index') }}"><i
+                                            class="fas fa-tachometer-alt"></i> | Gestão de Notícias</a>
+                                    <a class="dropdown-item" href="{{ route('news.index') }}"><i
+                                            class="fas fa-newspaper"></i> | Portal de Notícias</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <i class="fas fa-sign-out-alt"></i> | {{ __('Sair') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Dashboard</div>
+                    <div class="card-header">Gestão de Permissão</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -14,7 +14,7 @@
                             </div>
                         @endif
 
-                        <a class="text-success" href="{{ route('permission.create') }}">&plus; Cadastrar Permissão</a>
+                        <a class="text-success" href="{{ route('permission.create') }}"><i class="fas fa-plus"></i> Cadastrar Permissão</a>
 
                         @if ($errors)
                             @foreach ($errors->all() as $error)

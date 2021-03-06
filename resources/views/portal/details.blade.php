@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <a class="btn btn-link mb-2" href="{{ route('news.index') }}">&larr; Voltar</a>
+                <a class="btn btn-link mb-2" href="{{ route('news.index') }}"><i class="fas fa-long-arrow-alt-left"></i> Voltar para a listagem</a>
                 @if ($news->image)
                     <div class="mb-3 expand rounded shadow-sm">
                         <img src="{{ asset('storage/' . $news->image) }}" alt="{{ $news->title }}" class="img-fluid">

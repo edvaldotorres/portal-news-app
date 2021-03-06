@@ -5,11 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Dashboard</div>
+                    <div class="card-header">Perfil</div>
 
                     <div class="card-body">
 
-                        <a class="text-success" href="{{ route('user.index') }}">&leftarrow; Voltar para a listagem</a>
+                        <a class="text-success" href="{{ route('user.index') }}"><i class="fas fa-long-arrow-alt-left"></i> Voltar para a listagem</a>
 
                         @if ($errors)
                             @foreach ($errors->all() as $error)
@@ -19,7 +19,7 @@
                             @endforeach
                         @endif
 
-                        <h2 class="mt-4">perfis de: {{ $user->name }}</h2>
+                        <h2 class="mt-4">Perfil de: {{ $user->name }}</h2>
 
                         <form action="{{ route('user.roleSync', ['id' => $user->id]) }}" method="post" class="mt-4"
                             autocomplete="off">
@@ -35,7 +35,7 @@
                                 </div>
                             @endforeach
 
-                            <button type="submit" class="btn btn-block btn-success mt-4">Sincronizar Usuários</button>
+                            <button type="submit" class="btn btn-block btn-success mt-4">Sincronizar usuário</button>
                         </form>
                     </div>
 

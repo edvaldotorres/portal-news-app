@@ -7,15 +7,15 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
-                            <span>{{ __('Cadastrar notícia') }}</span>
-                            <small>Cadastrando notícia como:
+                            <span>{{ __('Cadastro de Notícia') }}</span>
+                            <small>Cadastrar notícia como:
                                 <strong>{{ Auth::check() ? Auth::user()->name : 'Anônimo' }}</strong></small>
                         </div>
                     </div>
 
                     <div class="card-body">
 
-                        <a class="text-success" href="{{ route('post.index') }}">&leftarrow; Voltar para a listagem</a>
+                        <a class="text-success" href="{{ route('post.index') }}"><i class="fas fa-long-arrow-alt-left"></i> Voltar para a listagem</a>
 
                         @if ($errors)
                             @foreach ($errors->all() as $error)
@@ -30,13 +30,13 @@
 
                             <div class="form-group">
                                 <label for="title">Título</label>
-                                <input type="text" class="form-control" id="title" placeholder="Insira o título do artigo"
+                                <input type="text" class="form-control" id="title" placeholder="Insira o título da notícia"
                                     name="title" value="{{ old('title') }}">
                             </div>
 
                             <div class="form-group">
                                 <label for="title">Lead</label>
-                                <input id="lead" type="text"
+                                <input id="lead" placeholder="Insira a lead da notícia" type="text"
                                     class="form-control{{ $errors->has('lead') ? ' is-invalid' : '' }}" name="lead"
                                     value="{{ old('lead') }}" maxlength="190" required>
                             </div>
@@ -63,7 +63,7 @@
                                 </div>
                             </div>
 
-                            <button type="submit" class="btn btn-block btn-success">Cadastrar Artigo</button>
+                            <button type="submit" class="btn btn-block btn-success">Cadastrar</button>
 
                         </form>
                     </div>

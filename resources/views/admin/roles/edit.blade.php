@@ -5,11 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Dashboard</div>
+                    <div class="card-header">Editar Perfil</div>
 
                     <div class="card-body">
 
-                        <a class="text-success" href="{{ route('role.index') }}">&leftarrow; Voltar para a listagem</a>
+                        <a class="text-success" href="{{ route('role.index') }}"><i class="fas fa-long-arrow-alt-left"></i> Voltar para a listagem</a>
 
                         @if ($errors)
                             @foreach ($errors->all() as $error)
@@ -25,12 +25,12 @@
                             @method('PUT')
 
                             <div class="form-group">
-                                <label for="name">Nome do Perfil</label>
-                                <input type="text" class="form-control" id="name" placeholder="Insira o nome do Perfil"
+                                <label for="name">Nome do perfil</label>
+                                <input type="text" class="form-control" id="name" placeholder="Insira o nome do perfil"
                                     name="name" value="{{ old('name') ?? $role->name }}">
                             </div>
 
-                            <button type="submit" class="btn btn-block btn-success">Editar Perfil</button>
+                            <button type="submit" class="btn btn-block btn-success">Editar</button>
                         </form>
                     </div>
 

@@ -33,5 +33,8 @@
                 @endforelse
             </div>
         </div>
+        <div class="d-flex justify-content-center">
+            {!! $news->links() !!}
+        </div>
     </div>
 @endsection
