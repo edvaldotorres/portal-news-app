@@ -10,23 +10,13 @@ use Illuminate\Support\Facades\Auth;
 class NewsController extends Controller
 {
     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $news = Post::where('id_user', Auth::user()->id)->get();
+        $news = Post::all();
 
         return response()->json($news);
     }

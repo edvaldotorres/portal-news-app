@@ -15,7 +15,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = Post::orderBy('updated_at', 'desc')->paginate(5);
+        $news = Post::where('published', 1)->orderBy('updated_at', 'desc')->paginate(10);
 
         return view('portal.news', [
             'news' => $news

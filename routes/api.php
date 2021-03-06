@@ -16,6 +16,6 @@ use App\Http\Controllers\Api\NewsController;
 |
 */
 
-Route::group(['namespace' => 'Api', 'middleware' => 'auth'], function () {
+Route::group(['namespace' => 'Api'], function () {
     Route::get('/', [NewsController::class, 'index'])->name('news.index');
 });

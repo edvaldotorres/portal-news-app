@@ -32,10 +32,6 @@ Route::get('{id}/details', [NewsController::class, 'show'])->name('news.show');
 
 /*************************************************************/
 
-Route::redirect('/home',  url('/admin/post'), 301);
-
-/*************************************************************/
-
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::get('/post', [PostController::class, 'index'])->name('post.index');
 

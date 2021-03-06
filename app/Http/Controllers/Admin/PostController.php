@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -25,7 +26,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::paginate(5);
+        $posts = Post::paginate(10);
 
         return view('admin.posts.index', [
             'posts' => $posts
@@ -54,19 +55,10 @@ class PostController extends Controller
             'title' => 'required|string|max:255',
             'lead' => 'required|string|max:190',
             'content' => 'required|string|max:30000',
+            'published' => 'required',
         ]);
 
-        $post = new Post($validated);
-
-        $post->title = $request->title;
-        $post->lead = $request->lead;
-        $post->content = $request->content;
-
-        if (!empty($request->published)) {
-            $post->published = $request->published;
-        }
-
-        $post->save();
+        $post = Auth::user()->posts()->create($validated);
 
         return redirect()->route('post.edit', [
             'post' => $post->id,
