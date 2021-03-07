@@ -60,7 +60,7 @@ class PostController extends Controller
 
         $post = Auth::user()->posts()->create($validated);
 
-        return redirect()->route('post.edit', [
+        return redirect()->route('post.index', [
             'post' => $post->id,
         ]);
     }
