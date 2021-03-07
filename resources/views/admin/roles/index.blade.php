@@ -6,24 +6,9 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Gestão de Perfil</div>
-
                     <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-
-                        <a class="text-success" href="{{ route('role.create') }}"><i class="fas fa-plus"></i> Cadastrar Perfil</a>
-
-                        @if ($errors)
-                            @foreach ($errors->all() as $error)
-                                <div class="alert alert-danger mt-4" role="alert">
-                                    {{ $error }}
-                                </div>
-                            @endforeach
-                        @endif
-
+                        <a class="text-success" href="{{ route('role.create') }}"><i class="fas fa-plus"></i> Cadastrar
+                            Perfil</a>
                         <table class="table table-striped mt-4">
                             <thead>
                                 <tr>
@@ -33,7 +18,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-
                                 @foreach ($roles as $role)
                                     <tr>
                                         <td>{{ $role->id }}</td>
@@ -50,10 +34,12 @@
                                         </td>
                                     </tr>
                                 @endforeach
-
                             </tbody>
                         </table>
                     </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    {!! $roles->links() !!}
                 </div>
             </div>
         </div>

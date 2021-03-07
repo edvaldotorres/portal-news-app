@@ -6,24 +6,9 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Gestão de Permissão</div>
-
                     <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-
-                        <a class="text-success" href="{{ route('permission.create') }}"><i class="fas fa-plus"></i> Cadastrar Permissão</a>
-
-                        @if ($errors)
-                            @foreach ($errors->all() as $error)
-                                <div class="alert alert-danger mt-4" role="alert">
-                                    {{ $error }}
-                                </div>
-                            @endforeach
-                        @endif
-
+                        <a class="text-success" href="{{ route('permission.create') }}"><i class="fas fa-plus"></i>
+                            Cadastrar Permissão</a>
                         <table class="table table-striped mt-4">
                             <thead>
                                 <tr>
@@ -33,7 +18,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-
                                 @foreach ($permissions as $permission)
                                     <tr>
                                         <td>{{ $permission->id }}</td>
@@ -41,7 +25,8 @@
                                         <td class="d-flex">
                                             <a class="mr-3 btn btn-sm btn-outline-success"
                                                 href="{{ route('permission.edit', ['id' => $permission->id]) }}">Editar</a>
-                                            <form action="{{ route('permission.destroy', ['id' => $permission->id]) }}" method="post">
+                                            <form action="{{ route('permission.destroy', ['id' => $permission->id]) }}"
+                                                method="post">
                                                 @csrf
                                                 <input class="btn btn-sm btn-outline-danger" type="submit" value="Remover">
                                             </form>
@@ -51,6 +36,9 @@
 
                             </tbody>
                         </table>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        {!! $permissions->links() !!}
                     </div>
                 </div>
             </div>
