@@ -37,9 +37,9 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
-                <div class="d-flex justify-content-center">
-                    {!! $roles->links() !!}
+                    <div class="d-flex justify-content-center">
+                        {!! $roles->links() !!}
+                    </div>
                 </div>
             </div>
         </div>

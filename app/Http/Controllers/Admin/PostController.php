@@ -60,20 +60,9 @@ class PostController extends Controller
 
         $post = Auth::user()->posts()->create($validated);
 
-        return redirect()->route('post.index', [
-            'post' => $post->id,
-        ]);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        if ($post) {
+            return redirect()->route('post.index', ['post' => $post->id])->with('success', 'Notícia criada com sucesso! 🎉');
+        }
     }
 
     /**
@@ -98,6 +87,13 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'lead' => 'required|string|max:190',
+            'content' => 'required|string|max:30000',
+            'published' => 'required',
+        ]);
+
         $post->title = $request->title;
         $post->lead = $request->lead;
         $post->content = $request->content;
@@ -106,10 +102,9 @@ class PostController extends Controller
             $post->published = $request->published;
         }
 
-        $post->save();
-        return redirect()->route('post.edit', [
-            'post' => $post->id,
-        ]);
+        if ($post->save()) {
+            return redirect("admin/post")->with('success', "Notícia alterada com sucesso! 🎉");
+        }
     }
 
     /**
@@ -122,6 +117,6 @@ class PostController extends Controller
     {
         $post->delete();
 
-        return redirect()->route('post.index');
+        return redirect()->route('post.index')->with('success', "Notícia removida com sucesso! 🎉");
     }
 }

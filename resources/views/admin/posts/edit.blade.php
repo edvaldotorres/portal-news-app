@@ -16,7 +16,7 @@
                             <div class="form-group">
                                 <label for="title">Título</label>
                                 <input type="text" class="form-control" id="title" placeholder="Insira o título da notícia"
-                                    name="title" value="{{ old('title') ?? $post->title }}">
+                                    name="title" value="{{ old('title') ?? $post->title }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="title">Lead</label>
@@ -27,7 +27,7 @@
                             <div class="form-group">
                                 <label for="content">Conteúdo</label>
                                 <textarea class="form-control" id="content" rows="10" name="content"
-                                    placeholder="Insira o conteúdo...">{{ old('content') ?? $post->content }}</textarea>
+                                    placeholder="Insira o conteúdo..." required>{{ old('content') ?? $post->content }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="content">Publicado</label>

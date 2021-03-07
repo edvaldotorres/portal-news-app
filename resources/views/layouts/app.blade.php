@@ -93,7 +93,22 @@
                 </div>
             </div>
         </nav>
-
+        <div class="container">
+            <div class="col-md-5 offset-5 mt-4">
+                @if ($message = Session::get('success'))
+                    <div class="alert alert-success alert-block">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <strong>{{ $message }}</strong>
+                    </div>
+                @endif
+                @if ($message = Session::get('error'))
+                    <div class="alert alert-danger alert-block">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <strong>{{ $message }}</strong>
+                    </div>
+                @endif
+            </div>
+        </div>
         <main class="py-4">
             @yield('content')
         </main>

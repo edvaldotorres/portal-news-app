@@ -20,7 +20,7 @@
                             <div class="form-group">
                                 <label for="title">Título</label>
                                 <input type="text" class="form-control" id="title" placeholder="Insira o título da notícia"
-                                    name="title" value="{{ old('title') }}">
+                                    name="title" value="{{ old('title') }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="title">Lead</label>
@@ -31,7 +31,7 @@
                             <div class="form-group">
                                 <label for="content">Conteúdo</label>
                                 <textarea class="form-control" id="content" rows="10" name="content"
-                                    placeholder="Insira o conteúdo..."></textarea>
+                                    placeholder="Insira o conteúdo..." required></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="content">Publicado</label>
