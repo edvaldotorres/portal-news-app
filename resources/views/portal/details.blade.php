@@ -8,7 +8,7 @@
                     Voltar para a listagem</a>
                 <h3 class="text-center mb-2">{{ $news->title }}</h3>
                 <p class="small mb-0 text-center mb-2">Atualizado em {{ date_format($news->updated_at, 'd/m/y') }} às
-                    {{ date_format($news->updated_at, 'H:i') }} - Por:
+                    {{ date_format($news->updated_at, 'H:i') }} - Criado por:
                     {{ $news->user ? $news->user->name : 'Anônimo' }}</p>
                 <h5 class="my-3 text-justify">{{ $news->lead }}</h5>
                 <p class="m-0 text-justify">{{ $news->content }}</p>

@@ -14,7 +14,7 @@
                             </h5>
                             <p class="m-0">{{ $new->lead }}</p>
                             <small>Atualizado em {{ date_format($new->updated_at, 'd/m/y') }} às
-                                {{ date_format($new->updated_at, 'H:i') }} - Por:
+                                {{ date_format($new->updated_at, 'H:i') }} - Criado por:
                                 {{ $new->user ? $new->user->name : 'Anônimo' }}
                             </small>
                         </div>
