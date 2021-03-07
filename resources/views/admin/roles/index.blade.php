@@ -29,6 +29,7 @@
                                                 href="{{ route('role.permission', ['id' => $role->id]) }}">Permissões</a>
                                             <form action="{{ route('role.destroy', ['id' => $role->id]) }}" method="post">
                                                 @csrf
+                                                @method('delete')
                                                 <input class="btn btn-sm btn-outline-danger" type="submit" value="Remover">
                                             </form>
                                         </td>

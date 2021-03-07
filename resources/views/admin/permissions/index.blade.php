@@ -27,6 +27,7 @@
                                                 href="{{ route('permission.edit', ['id' => $permission->id]) }}">Editar</a>
                                             <form action="{{ route('permission.destroy', ['id' => $permission->id]) }}"
                                                 method="post">
+                                                @method('delete')
                                                 @csrf
                                                 <input class="btn btn-sm btn-outline-danger" type="submit" value="Remover">
                                             </form>

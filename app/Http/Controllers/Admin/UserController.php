@@ -52,24 +52,14 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $user = new User();
+        
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
 
         $user->save();
 
-        return redirect()->route('user.index');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        return redirect()->route('user.index')->with('success', 'Usuário cadastrado com sucesso! 🎉');
     }
 
     /**
@@ -97,6 +87,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $user = User::where('id', $id)->first();
+        
         $user->name = $request->name;
         $user->email = $request->email;
 
@@ -106,7 +97,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect()->route('user.index');
+        return redirect()->route('user.index')->with('success', 'Usuário alterado com sucesso! 🎉');
     }
 
     /**
@@ -118,9 +109,10 @@ class UserController extends Controller
     public function destroy($id)
     {
         $user = User::where('id', $id)->first();
+
         $user->delete();
 
-        return redirect()->route('user.index');
+        return redirect()->route('user.index')->with('success', 'Usuário removido com sucesso! 🎉');
     }
 
     public function role($id)

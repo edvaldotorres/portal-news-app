@@ -16,7 +16,7 @@
                             <div class="form-group">
                                 <label for="name">Nome do perfil</label>
                                 <input type="text" class="form-control" id="name" placeholder="Insira o nome do perfil"
-                                    name="name" value="{{ old('name') ?? $role->name }}">
+                                    name="name" value="{{ old('name') ?? $role->name }}" required>
                             </div>
                             <button type="submit" class="btn btn-block btn-success">Editar</button>
                         </form>

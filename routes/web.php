@@ -38,8 +38,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
     Route::post('/post', [PostController::class, 'store'])->name('post.store');
 
-    Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
-
     Route::get('/post/{post}/edit', [PostController::class, 'edit'])->name('post.edit');
     Route::match(['put', 'patch'], '/post/{post}', [PostController::class, 'update'])->name('post.update');
 
@@ -93,5 +91,5 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::get('/permission/{id}/edit', [PermissionController::class, 'edit'])->name('permission.edit');
     Route::put('/permission/{id}', [PermissionController::class, 'update'])->name('permission.update');
 
-    Route::post('/permission/{id}', [PermissionController::class, 'destroy'])->name('permission.destroy');
+    Route::delete('/permission/{id}', [PermissionController::class, 'destroy'])->name('permission.destroy');
 });

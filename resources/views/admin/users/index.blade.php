@@ -34,12 +34,12 @@
                                                 href="{{ route('user.role', ['id' => $user->id]) }}">Perfis</a>
                                             <form action="{{ route('user.destroy', ['id' => $user->id]) }}" method="post">
                                                 @csrf
+                                                @method('delete')
                                                 <input class="btn btn-sm btn-outline-danger" type="submit" value="Remover">
                                             </form>
                                         </td>
                                     </tr>
                                 @endforeach
-
                             </tbody>
                         </table>
                     </div>

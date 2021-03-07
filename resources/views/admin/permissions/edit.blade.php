@@ -16,7 +16,7 @@
                             <div class="form-group">
                                 <label for="name">Nome da permissão</label>
                                 <input type="text" class="form-control" id="name" placeholder="Insira o nome da permissão"
-                                    name="name" value="{{ old('name') ?? $permission->name }}">
+                                    name="name" value="{{ old('name') ?? $permission->name }}" required>
                             </div>
                             <button type="submit" class="btn btn-block btn-success">Editar</button>
                         </form>

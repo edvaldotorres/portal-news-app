@@ -56,18 +56,7 @@ class PermissionController extends Controller
 
         $permission->save();
 
-        return redirect()->route('permission.index');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        return redirect()->route('permission.index')->with('success', 'Permissão cadastrada com sucesso! 🎉');
     }
 
     /**
@@ -95,12 +84,12 @@ class PermissionController extends Controller
     public function update(Request $request, $id)
     {
         $permission = Permission::where('id', $id)->first();
+
         $permission->name = $request->name;
 
         $permission->save();
 
-        return redirect()->route('permission.index');
-        //var_dump($request->all(), $id);
+        return redirect()->route('permission.index')->with('success', 'Permissão alterada com sucesso! 🎉');
     }
 
     /**
@@ -115,6 +104,6 @@ class PermissionController extends Controller
 
         $permission->delete();
 
-        return redirect()->route('role.index');
+        return redirect()->route('role.index')->with('success', 'Permissão removida com sucesso! 🎉');
     }
 }

@@ -17,6 +17,9 @@
                                 {{ date_format($new->updated_at, 'H:i') }} - Criado por:
                                 {{ $new->user ? $new->user->name : 'Anônimo' }}
                             </small>
+                            <div class="col-md-5 offset-10">
+                                <a href="{{ route('news.show', $new->id) }}" type="button" class="btn btn-primary">Ver mais</a>
+                            </div>
                         </div>
                     </div>
                 @empty

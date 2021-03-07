@@ -52,22 +52,12 @@ class RoleController extends Controller
     public function store(Request $request)
     {
         $role = new Role();
+
         $role->name = $request->name;
 
         $role->save();
 
-        return redirect()->route('role.index');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        return redirect()->route('role.index')->with('success', 'Perfil cadastrado com sucesso! 🎉');
     }
 
     /**
@@ -95,11 +85,12 @@ class RoleController extends Controller
     public function update(Request $request, $id)
     {
         $role = Role::where('id', $id)->first();
+
         $role->name = $request->name;
 
         $role->save();
 
-        return redirect()->route('role.index');
+        return redirect()->route('role.index')->with('success', 'Perfil alterado com sucesso! 🎉');
     }
 
     /**
@@ -114,7 +105,7 @@ class RoleController extends Controller
 
         $role->delete();
 
-        return redirect()->route('role.index');
+        return redirect()->route('role.index')->with('success', 'Perfil removido com sucesso! 🎉');
     }
 
     public function permission($id)

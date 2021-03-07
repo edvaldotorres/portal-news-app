@@ -17,12 +17,12 @@
                                 <label for="name">Nome do usuário</label>
                                 <input type="text" class="form-control" id="name"
                                     placeholder="Insira o nome completo do usuário" name="name"
-                                    value="{{ old('name') ?? $user->name }}">
+                                    value="{{ old('name') ?? $user->name }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="name">E-mail</label>
                                 <input type="email" class="form-control" id="email" placeholder="Insira o email válido"
-                                    name="email" value="{{ old('email') ?? $user->email }}">
+                                    name="email" value="{{ old('email') ?? $user->email }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="name">Senha</label>

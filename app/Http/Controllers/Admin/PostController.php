@@ -60,9 +60,7 @@ class PostController extends Controller
 
         $post = Auth::user()->posts()->create($validated);
 
-        if ($post) {
-            return redirect()->route('post.index', ['post' => $post->id])->with('success', 'Notícia criada com sucesso! 🎉');
-        }
+        return redirect()->route('post.index', ['post' => $post->id])->with('success', 'Notícia cadastrada com sucesso! 🎉');
     }
 
     /**
@@ -102,9 +100,9 @@ class PostController extends Controller
             $post->published = $request->published;
         }
 
-        if ($post->save()) {
-            return redirect("admin/post")->with('success', "Notícia alterada com sucesso! 🎉");
-        }
+        $post->save();
+
+        return redirect("admin/post")->with('success', "Notícia alterada com sucesso! 🎉");
     }
 
     /**

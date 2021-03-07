@@ -13,7 +13,7 @@
                             <div class="form-group">
                                 <label for="name">Nome da permissão</label>
                                 <input type="text" class="form-control" id="name" placeholder="Insira o nome da permissão"
-                                       name="name" value="{{ old('name') }}">
+                                       name="name" value="{{ old('name') }}" required>
                             </div>
                             <button type="submit" class="btn btn-block btn-success">Cadastrar</button>
                         </form>
