@@ -6,24 +6,14 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Gestão de Usuários</div>
-
                     <div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
                             </div>
                         @endif
-
-                        <a class="text-success" href="{{ route('user.create') }}"><i class="fas fa-plus"></i> Cadastrar Usuário</a>
-
-                        @if ($errors)
-                            @foreach ($errors->all() as $error)
-                                <div class="alert alert-danger mt-4" role="alert">
-                                    {{ $error }}
-                                </div>
-                            @endforeach
-                        @endif
-
+                        <a class="text-success" href="{{ route('user.create') }}"><i class="fas fa-plus"></i> Cadastrar
+                            Usuário</a>
                         <table class="table table-striped mt-4">
                             <thead>
                                 <tr>
@@ -33,7 +23,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-
                                 @foreach ($users as $user)
                                     <tr>
                                         <td>{{ $user->id }}</td>
