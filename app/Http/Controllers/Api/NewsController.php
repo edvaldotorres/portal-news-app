@@ -16,7 +16,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = Post::all();
+        $news = Post::paginate(10);
 
         return response()->json($news);
     }

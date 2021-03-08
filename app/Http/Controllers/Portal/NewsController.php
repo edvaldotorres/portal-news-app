@@ -34,4 +34,14 @@ class NewsController extends Controller
 
         return view('portal.details', ['news' => $news]);
     }
+
+    public function __invoke()
+    {
+        $news = Post::all();
+
+        $content = view('portal.feed', compact('news'));
+
+        return response($content, 200)
+            ->header('Content-Type', 'text/xml');
+    }
 }

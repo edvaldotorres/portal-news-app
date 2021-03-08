@@ -30,6 +30,8 @@ Route::get('/', [NewsController::class, 'index'])->name('news.index');
 
 Route::get('{id}/details', [NewsController::class, 'show'])->name('news.show');
 
+Route::get('/feed', [NewsController::class, '__invoke'])->name('news.__invoke');
+
 /*************************************************************/
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
