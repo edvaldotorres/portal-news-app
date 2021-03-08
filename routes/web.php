@@ -35,54 +35,54 @@ Route::get('{id}/details', [NewsController::class, 'show'])->name('news.show');
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::get('/post', [PostController::class, 'index'])->name('post.index');
 
-    Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
+    Route::get('/post/create', [PostController::class, 'create'])->name('post.create')->middleware(['permission:Gestão de Notícias: Cadastrar Notícia']);
     Route::post('/post', [PostController::class, 'store'])->name('post.store');
 
-    Route::get('/post/{post}/edit', [PostController::class, 'edit'])->name('post.edit');
+    Route::get('/post/{post}/edit', [PostController::class, 'edit'])->name('post.edit')->middleware(['permission:Gestão de Notícias: Editar Notícia']);
     Route::match(['put', 'patch'], '/post/{post}', [PostController::class, 'update'])->name('post.update');
 
-    Route::delete('/post/{post}', [PostController::class, 'destroy'])->name('post.destroy');
+    Route::delete('/post/{post}', [PostController::class, 'destroy'])->name('post.destroy')->middleware(['permission:Gestão de Notícias: Remover Notícia']);
 });
 
 /*************************************************************/
 
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
-    Route::get('/user', [UserController::class, 'index'])->name('user.index');
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin','middleware' => ['role:Administrador']], function () {
+    Route::get('/user', [UserController::class, 'index'])->name('user.index')->middleware(['permission:Gestão de Usuários: Listagem de Usuários']);
 
-    Route::get('/user/create', [UserController::class, 'create'])->name('user.create');
+    Route::get('/user/create', [UserController::class, 'create'])->name('user.create')->middleware(['permission:Gestão de Usuários: Cadastrar Usuário']);
     Route::post('/user', [UserController::class, 'store'])->name('user.store');
 
-    Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
+    Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit')->middleware(['permission:Gestão de Usuários: Editar Usuário']);
     Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update');
 
-    Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy');
+    Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy')->middleware(['permission:Gestão de Usuários: Remover Usuário']);
 
-    Route::get('/user/{id}/role', [UserController::class, 'role'])->name('user.role');
+    Route::get('/user/{id}/role', [UserController::class, 'role'])->name('user.role')->middleware(['permission:Gestão de Usuários: Perfil do Usuário']);
 
     Route::put('/user/{id}/role/sync', [UserController::class, 'roleSync'])->name('user.roleSync');
 });
 
 /*************************************************************/
 
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
-    Route::get('/role', [RoleController::class, 'index'])->name('role.index');
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin','middleware' => ['role:Administrador']], function () {
+    Route::get('/role', [RoleController::class, 'index'])->name('role.index')->middleware(['permission:Gestão de Perfis: Listagem de Perfis']);
 
-    Route::get('/role/create', [RoleController::class, 'create'])->name('role.create');
+    Route::get('/role/create', [RoleController::class, 'create'])->name('role.create')->middleware(['permission:Gestão de Perfis: Cadastrar Perfil']);
     Route::post('/role', [RoleController::class, 'store'])->name('role.store');
 
-    Route::get('/role/{id}/edit', [RoleController::class, 'edit'])->name('role.edit');
+    Route::get('/role/{id}/edit', [RoleController::class, 'edit'])->name('role.edit')->middleware(['permission:Gestão de Perfis: Editar Perfil']);
     Route::put('/role/{id}', [RoleController::class, 'update'])->name('role.update');
 
-    Route::delete('/role/{id}', [RoleController::class, 'destroy'])->name('role.destroy');
+    Route::delete('/role/{id}', [RoleController::class, 'destroy'])->name('role.destroy')->middleware(['permission:Gestão de Perfis: Remover Perfil']);
 
-    Route::get('/role/{id}/permission', [RoleController::class, 'permission'])->name('role.permission');
+    Route::get('/role/{id}/permission', [RoleController::class, 'permission'])->name('role.permission')->middleware(['permission:Gestão de Perfis: Permissões do Perfil']);
 
     Route::put('/role/{id}/permission/sync', [RoleController::class, 'permissionSync'])->name('role.permissionSync');
 });
 
 /*************************************************************/
 
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin','middleware' => ['role:Desenvolvedor']], function () {
     Route::get('/permission', [PermissionController::class, 'index'])->name('permission.index');
     
     Route::get('/permission/create', [PermissionController::class, 'create'])->name('permission.create');
