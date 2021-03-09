@@ -22,15 +22,11 @@ php artisan serve
 
 ## Author
 
-👤 **Edvaldo Torres**
+👤 **Edvaldo Torres de Souza**
 
 * Website: edvaldodev@gmail.com
 * Github: [@edvaldotorres](https://github.com/edvaldotorres)
-* LinkedIn: [@edvaldo-torres-de-souza-189894150](https://linkedin.com/in/edvaldo-torres-de-souza-189894150)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](edvaldodev@gmail.com). You can also take a look at the [contributing guide](Give a star if this project helped you!).
+* LinkedIn: [@edvaldo-torres-189894150](https://linkedin.com/in/edvaldo-torres-189894150)
 
 ## Show your support
 
