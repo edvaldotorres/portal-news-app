@@ -11,13 +11,13 @@
 ## Install
 
 ```sh
-1- composer install, 2- php artisan key:generate, 3- php artisan migrate:refresh, 4- php artisan db:seed
+* composer install * php artisan key:generate * php artisan migrate:refresh * php artisan db:seed
 ```
 
 ## Usage
 
 ```sh
-aaaaaaa
+php artisan serve
 ```
 
 ## Author
