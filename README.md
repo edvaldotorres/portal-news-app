@@ -26,7 +26,7 @@ php artisan serve
 
 * Website: edvaldodev@gmail.com
 * Github: [@edvaldotorres](https://github.com/edvaldotorres)
-* LinkedIn: [@edvaldo-torres-de-souza-189894150\/](https://linkedin.com/in/edvaldo-torres-de-souza-189894150\/)
+* LinkedIn: [@edvaldo-torres-de-souza-189894150\/](https://linkedin.com/in/edvaldo-torres-de-souza-189894150/)
 
 ## Show your support
 
