@@ -34,7 +34,7 @@ Possivelmente possível desenvolver novas features para o projeto.
 9. Agora só acessar o seu localhost e entrar com E-mail do usuário admin@admin.com e senha 123admin.
 10. Em alguns casos seja preciso da algumas permissões para o projeto rodar.
 
-## If you still don't follow, get to know social networks
+## Se ainda não segue, conheça as redes sociais
 
 <p align="center">
 <a href="#" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="edvaldotorres" height="20" width="20" /></a>
@@ -43,7 +43,7 @@ Possivelmente possível desenvolver novas features para o projeto.
 <a href="https://www.instagram.com/edvaldotorres_/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="edvaldotorres" height="20" width="20" /></a>
 </p>
 
-⭐️ From [Edvaldo Torres](https://github.com/edvaldotorres)
+⭐️ De [Edvaldo Torres](https://github.com/edvaldotorres)
 
 
 
