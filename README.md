@@ -1,6 +1,6 @@
 ## Descrição
 
-O projeto é um Portal de Notícias seguindo padrão MVC, tem uma api onde pode ser facilmente consumida em outros sistemas, sem contar que também tem um RSS que é um formato de distribuição de informações. O sistema conta com perfil de usuário e permissões respectivamente para os devidos perfis.
+O projeto é um Portal de Notícias seguindo padrão MVC, tem uma API onde pode ser facilmente consumida em outros sistemas, sem contar que também tem um RSS que é um formato de distribuição de informações. O sistema conta com perfil de usuário e permissões respectivamente para os devidos perfis.
 
 ## Stacks
 
