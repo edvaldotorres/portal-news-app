@@ -11,10 +11,7 @@
 ## Install
 
 ```sh
-1. composer install 2. 
-2. php artisan key:generate 
-3. 3. php artisan migrate:refresh 
-4. 4. php artisan db:seed
+1. composer install 2. php artisan key:generate 3. php artisan migrate:refresh  4. php artisan db:seed
 ```
 
 ## Usage
@@ -29,7 +26,7 @@ php artisan serve
 
 * Website: edvaldodev@gmail.com
 * Github: [@edvaldotorres](https://github.com/edvaldotorres)
-* LinkedIn: [@edvaldo-torres-de-souza-189894150\/](https://linkedin.com/in/edvaldotorresdesouza)
+* LinkedIn: [@edvaldotorresdesouza](https://linkedin.com/in/edvaldotorresdesouza)
 
 ## Show your support
 
