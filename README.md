@@ -34,11 +34,16 @@ Possivelmente possível desenvolver novas features para o projeto.
 9. Agora só acessar o seu localhost e entrar com E-mail do usuário admin@admin.com e senha 123admin.
 10. Em alguns casos seja preciso da algumas permissões para o projeto rodar.
 
-### Contato
+## If you still don't follow, get to know social networks
 
-- **[Instagram](https://www.instagram.com/edvaldotorres_/?hl=pt-br)**
-- **[Linkedin](https://www.linkedin.com/in/edvaldo-torres-de-souza-189894150/)**
-- edvaldodev@gmail.com
+<p align="center">
+<a href="#" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="edvaldotorres" height="20" width="20" /></a>
+<a href="https://www.linkedin.com/in/edvaldo-torres-de-souza-189894150/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="edvaldotorres" height="20" width="20" /></a>
+<a href="https://www.facebook.com/edvaldo.torres.967/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg" alt="edvaldotorres" height="20" width="20" /></a>
+<a href="https://www.instagram.com/edvaldotorres_/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="edvaldotorres" height="20" width="20" /></a>
+</p>
+
+⭐️ From [Edvaldo Torres](https://github.com/edvaldotorres)
 
 
 
