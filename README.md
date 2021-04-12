@@ -16,6 +16,8 @@
 
 * PHP >= 7.4.3
 
+* composer >= 2.0.8
+
 * npm >= 6.14.6
 ## Install
 
@@ -50,7 +52,7 @@ php artisan serve
 
 * Website: https://instabio.cc/3031915AsJA4p
 * Github: [@edvaldotorres](https://github.com/edvaldotorres)
-* LinkedIn: [@edvaldotorres](https://linkedin.com/in/https:\/\/linkedin.com\/in\/edvaldo-torres-189894150)
+* LinkedIn: [@edvaldotorres](https://www.linkedin.com/in/edvaldo-torres-189894150/)
 
 ## 🤝 Contributing
 
