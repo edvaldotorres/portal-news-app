@@ -1,8 +1,5 @@
 <h1 align="center">Welcome to portal-news-app 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/laravel-8-blue.svg?cacheSeconds=2592000" />
-  <img alt="Version" src="https://img.shields.io/badge/php-7.4-blue.svg?cacheSeconds=2592000" />
-  <img alt="Version" src="https://img.shields.io/badge/npm-6.14-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/edvaldotorres/portal-news-app#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -53,7 +50,7 @@ php artisan serve
 
 * Website: https://instabio.cc/3031915AsJA4p
 * Github: [@edvaldotorres](https://github.com/edvaldotorres)
-* LinkedIn: [@https:\/\/linkedin.com\/in\/https:\\/\\/linkedin.com\\/in\\/edvaldo-torres-189894150](https://linkedin.com/in/https:\/\/linkedin.com\/in\/https:\\/\\/linkedin.com\\/in\\/edvaldo-torres-189894150)
+* LinkedIn: [@edvaldotorres](https://linkedin.com/in/https:\/\/linkedin.com\/in\/edvaldo-torres-189894150)
 
 ## 🤝 Contributing
 
