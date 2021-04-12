@@ -33,4 +33,4 @@ php artisan serve
 Give a ⭐️ if this project helped you!
 
 ***
-[![Readme Card](https://github.com/edvaldotorres/portal-news-app)](https://github.com/edvaldotorres/portal-news-app)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=edvaldotorres&repo=github-readme-stats)](https://github.com/edvaldotorres/portal-news-app)
